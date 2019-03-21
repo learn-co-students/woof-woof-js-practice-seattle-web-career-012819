@@ -9,8 +9,10 @@ filterButton.addEventListener('click', ()=>{
     isFilter = true;
   }
   else {
+    dogBar.innerHTML = "";
     filterButton.textContent = "Filter good dogs: OFF"
     isFilter = false;
+
     main();
   }
 })
@@ -26,6 +28,7 @@ fetch(DOG_URL)
 }
 
 function createNameSpan(dog){
+
   const nameSpan = document.createElement('span');
   if(isFilter){
     if(dog.isGoodDog === true){
