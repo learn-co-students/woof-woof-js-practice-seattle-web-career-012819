@@ -40,6 +40,7 @@ function addPupToDogBar(dog){
 
 function showPuppersInfo(dog){
   dogInfo.innerHTML = ''
+  const div = document.createElement('div')
   const dogPic = document.createElement('img')
   dogPic.src = dog.image
   const dogHeading = document.createElement('h2')
@@ -54,9 +55,10 @@ function showPuppersInfo(dog){
     dogButton.textContent = "Bad Dog!"
   }
 
-  dogInfo.appendChild(dogPic)
-  dogInfo.appendChild(dogHeading)
-  dogInfo.appendChild(dogButton)
+  div.appendChild(dogPic)
+  div.appendChild(dogHeading)
+  div.appendChild(dogButton)
+  dogInfo.appendChild(div)
 }
 //************************************************************
 
